@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Joki Genshin Impact | Aman & Terpercaya</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+:root {
+    --primary-glow: rgba(56, 189, 248, 0.4);
+    --secondary-glow: rgba(34, 197, 94, 0.4);
+}
+
+body { background:#0f172a; color:#e5e7eb; font-family: 'Segoe UI', Roboto, sans-serif; }
+.navbar { background:rgba(2,6,23,.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(56,189,248,.1); }
+
+.hero {
+    /* Gunakan min-height agar jika konten panjang di mobile, background tetap mengikuti */
+    min-height: 100vh; 
+    /* Gunakan dvh (Dynamic Viewport Height) untuk mendukung browser mobile modern */
+    min-height: 100dvh; 
+    background:
+        linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)),
+        url('asset/1920x1080.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; /* Mengatasi bug background 'melompat' di mobile */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px; /* Memberi ruang agar konten tidak mepet atas/bawah di mobile */
+}
+
+/* KARTU VISUAL (LAYANAN, HARGA, RAWAT) */
+.service-card, .price-card, .rawat-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    color: #f8fafc;
+    border: 1px solid rgba(56,189,248,.15);
+    box-shadow: 0 15px 35px rgba(0,0,0,.5);
+    transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: #020617;
+    height: 100%;
+}
+
+.service-card::before, .price-card::before, .rawat-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-image: var(--bg);
+    filter: brightness(.5) saturate(1.2);
+    z-index: 1;
+    transition: transform 0.6s ease;
+}
+
+.service-card::after, .price-card::after, .rawat-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(2,6,23,0.4), rgba(2,6,23,0.95));
+    z-index: 2;
+}
+
+.service-card > *, .price-card > *, .rawat-card > * {
+    position: relative;
+    z-index: 3;
+}
+
+/* HOVER EFFECTS */
+.service-card:hover, .price-card:hover, .rawat-card:hover {
+    transform: translateY(-12px);
+    border-color: rgba(56, 189, 248, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 20px var(--primary-glow);
+}
+
+.service-card:hover::before, .price-card:hover::before, .rawat-card:hover::before {
+    transform: scale(1.1);
+}
+
+/* LIST STYLING */
+ul { padding-left: 0; list-style: none; }
+.price-list li, .rawat-card ul li, .service-card ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 0;
+    border-bottom: 1px dashed rgba(255,255,255,.1);
+    font-size: 0.95rem;
+}
+
+.price, .price-tag {
+    color: #38bdf8;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+/* FORM STYLING */
+.form-control, .form-select {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    color: white;
+    border-radius: 10px;
+}
+.form-control:focus {
+    background: rgba(15, 23, 42, 1);
+    color: white;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.25);
+}
+
+.btn-wa { 
+    background: linear-gradient(45deg, #22c55e, #16a34a);
+    color: white; 
+    border: none; 
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 12px;
+    transition: 0.3s;
+}
+.btn-wa:hover { transform: scale(1.02); box-shadow: 0 0 20px var(--secondary-glow); color: white; }
+
+html { scroll-behavior: smooth; }
+section { scroll-margin-top: 100px; }
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem; /* Ukuran teks judul lebih kecil di HP */
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+            <i class="bi bi-stars text-info me-2"></i>Natsumi
+        </a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container" data-aos="zoom-out">
+        <h1 class="display-3 fw-bold text-white mb-3">JOKI GENSHIN IMPACT</h1>
+        <p class="lead mb-4 opacity-75">Aman • Cepat • Terpercaya • Full Garansi Manual Play</p>
+        <a href="#order" class="btn btn-wa btn-lg px-5 shadow">
+            <i class="bi bi-whatsapp me-2"></i>Order Sekarang
+        </a>
+    </div>
+</section>
+
+<section class="container my-5">
+    <h2 class="text-center mb-5 fw-bold" data-aos="fade-up">Layanan & Benefit</h2>
+    <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card p-4" style="--bg:url('https://act-webstatic.hoyoverse.com/upload/contentweb/2022/07/21/6f0ef40157e95b0d59455c12f4d3f270_155624686337076516.png')">
+                <h4 class="text-info fw-bold mb-3"><i class="bi bi-map-fill me-2"></i>Explore Map</h4>
+                <p class="price mb-4">Mulai Rp 50.000</p>
+                <ul class="mb-0">
+                    <li><span>Map 100% Rapi (All Region)</span> <i class="bi bi-check-circle-fill text-info"></i></li>
+                    <li><span>Chest & Puzzle Lengkap</span> <i class="bi bi-check-circle-fill text-info"></i></li>
+                    <li><span>Bonus Resin Request</span> <i class="bi bi-check-circle-fill text-info"></i></li>
+                    <li><span>Support Region Baru (Natlan/Nod)</span> <i class="bi bi-check-circle-fill text-info"></i></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card p-4" style="--bg:url('https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200312/2020031220284864612.png')">
+                <h4 class="text-warning fw-bold mb-3"><i class="bi bi-eye-fill me-2"></i>Cari Oculus</h4>
+                <p class="price mb-4">Rp 2.000 / item</p>
+                <ul class="mb-0">
+                    <li><span>Anemo s/d Luno Ready</span> <i class="bi bi-check-circle-fill text-warning"></i></li>
+                    <li><span>Manual & 100% Aman</span> <i class="bi bi-check-circle-fill text-warning"></i></li>
+                    <li><span>Tracking Map Akurat</span> <i class="bi bi-check-circle-fill text-warning"></i></li>
+                    <li><span>Progress Report Harian</span> <i class="bi bi-check-circle-fill text-warning"></i></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card p-4" style="--bg:url('https://act-webstatic.hoyoverse.com/upload/contentweb/2022/07/21/f95b03a7d7370aa4f5de3ac9a5f161bc_6624071789249609237.png')">
+                <h4 class="text-success fw-bold mb-3"><i class="bi bi-shield-fill-check me-2"></i>Rawat Akun</h4>
+                <p class="price mb-4">Rp 35.000 / 7 Hari</p>
+                <ul class="mb-0">
+                    <li><span>Daily Commission & Resin</span> <i class="bi bi-check-circle-fill text-success"></i></li>
+                    <li><span>Event Besar & Flagship</span> <i class="bi bi-check-circle-fill text-success"></i></li>
+                    <li><span>Weekly Boss & Battle Pass</span> <i class="bi bi-check-circle-fill text-success"></i></li>
+                    <li><span>No Cheat / Bot / Script</span> <i class="bi bi-check-circle-fill text-success"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="explore-area" class="container my-5">
+    <h2 class="text-center mb-2 fw-bold" data-aos="fade-up">Price List Eksplorasi</h2>
+    <p class="text-center mb-5 opacity-75">Harga per Sub-Area • Manual • 100% Rapi</p>
+
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="price-card p-4" style="--bg:url('https://act-webstatic.hoyoverse.com/upload/contentweb/2022/07/21/4c4b8babc68ffedce9bd5766b60e1ae5_4179268066050987122.png')">
+                <h4 class="text-success fw-bold">Mondstadt</h4>
+                <ul class="price-list">
+                    <li><span>Starfell Valley</span><span class="price-tag">Rp70.000</span></li>
+                    <li><span>Galesong Hill</span><span class="price-tag">Rp65.000</span></li>
+                    <li><span>Windwail Highland</span><span class="price-tag">Rp65.000</span></li>
+                    <li><span>Brightcrown Mountains</span><span class="price-tag">Rp75.000</span></li>
+                    <li><span>Dragonspine</span><span class="price-tag">Rp120.000</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="price-card p-4" style="--bg:url('https://act-webstatic.hoyoverse.com/upload/contentweb/2022/07/21/300df2aed5060579f08d7db601d8710d_6114191980464307756.png')">
+                <h4 class="text-warning fw-bold">Liyue</h4>
+                <ul class="price-list">
+                    <li><span>Bishui Plain</span><span class="price-tag">Rp70.000</span></li>
+                    <li><span>Qiongji Estuary</span><span class="price-tag">Rp70.000</span></li>
+                    <li><span>Sea of Clouds</span><span class="price-tag">Rp75.000</span></li>
+                    <li><span>Lisha</span><span class="price-tag">Rp75.000</span></li>
+                    <li><span>Minlin</span><span class="price-tag">Rp80.000</span></li>
+                    <li><span>Chenyu Vale</span><span class="price-tag">Rp85.000</span></li>
+                    <li><span>The Chasm (Upper)</span><span class="price-tag">Rp80.000</span></li>
+                    <li><span>The Chasm (Underground)</span><span class="price-tag">Rp110.000</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="price-card p-4" style="--bg:url('https://fastcdn.hoyoverse.com/content-v2/hk4e/129697/c2cf4a117398e656a2556274be0fc7c0_2065609257065575587.png')">
+                <h4 class="text-primary fw-bold">Inazuma</h4>
+                <ul class="price-list">
+                    <li><span>Narukami Island</span><span class="price-tag">Rp80.000</span></li>
+                    <li><span>Kannazuka</span><span class="price-tag">Rp75.000</span></li>
+                    <li><span>Yashiori Island</span><span class="price-tag">Rp85.000</span></li>
+                    <li><span>Watatsumi Island</span><span class="price-tag">Rp80.000</span></li>
+                    <li><span>Seirai Island</span><span class="price-tag">Rp95.000</span></li>
+                    <li><span>Tsurumi Island</span><span class="price-tag">Rp110.000</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="price-card p-4" style="--bg:url('https://act-webstatic.hoyoverse.com/upload/contentweb/2022/09/28/d978cf1ce85e372971bdcf6add639e8f_2885994809955401774.png')">
+                <h4 class="text-success fw-bold">Sumeru</h4>
+                <ul class="price-list">
+                    <li><span>Avidya Forest</span><span class="price-tag">Rp75.000</span></li>
+                    <li><span>Lokapala Jungle</span><span class="price-tag">Rp80.000</span></li>
+                    <li><span>Mawtiyima Forest</span><span class="price-tag">Rp80.000</span></li>
+                    <li><span>Gandharva Ville</span><span class="price-tag">Rp75.000</span></li>
+                    <li><span>Vanarana</span><span class="price-tag">Rp85.000</span></li>
+                    <li><span>Hypostyle Desert</span><span class="price-tag">Rp85.000</span></li>
+                    <li><span>Upper Setekh</span><span class="price-tag">Rp85.000</span></li>
+                    <li><span>Lower Setekh</span><span class="price-tag">Rp90.000</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="price-card p-4" style="--bg:url('https://fastcdn.hoyoverse.com/content-v2/hk4e/123167/cc9c3a4b128dd04cab9f1e64835ddf76_637149728334091513.png')">
+                <h4 class="text-info fw-bold">Fontaine</h4>
+                <ul class="price-list">
+                    <li><span>Court of Fontaine</span><span class="price-tag">Rp85.000</span></li>
+                    <li><span>Belleau Region</span><span class="price-tag">Rp80.000</span></li>
+                    <li><span>Beryl Region</span><span class="price-tag">Rp80.000</span></li>
+                    <li><span>Underwater Zone</span><span class="price-tag">Rp90.000</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="price-card p-4" style="--bg:url('https://fastcdn.hoyoverse.com/content-v2/hk4e/156698/1e3d927b04cf859f9b16b5c754a9836c_6094714350513460016.png')">
+                <h4 class="text-danger fw-bold">Natlan</h4>
+                <ul class="price-list">
+                    <li><span>Easybreeze Resort</span><span class="price-tag">Rp75.000</span></li>
+                    <li><span>Basin of Flames</span><span class="price-tag">Rp90.000</span></li>
+                    <li><span>Tequemecan Valley</span><span class="price-tag">Rp85.000</span></li>
+                    <li><span>Coatepec Mountain</span><span class="price-tag">Rp90.000</span></li>
+                    <li><span>Ochkanatlan</span><span class="price-tag">Rp100.000</span></li>
+                    <li><span>Ancient Sacred Mountain</span><span class="price-tag">Rp110.000</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="price-card p-4" style="--bg:url('https://fastcdn.hoyoverse.com/content-v2/hk4e/162067/57aec6a3774c7fcbf9bd70abeed9be84_2324889976656751522.png')">
+                <h4 class="text-info fw-bold">Nod-Krai</h4>
+                <ul class="price-list">
+                    <li><span>Wavechaser Plain</span><span class="price-tag">Rp85.000</span></li>
+                    <li><span>Hiisi Island</span><span class="price-tag">Rp90.000</span></li>
+                    <li><span>Lempo Isle</span><span class="price-tag">Rp85.000</span></li>
+                    <li><span>Paha Isle</span><span class="price-tag">Rp85.000</span></li>
+                    <li><span>Ashveil Peak</span><span class="price-tag">Rp100.000</span></li>
+                    <li><span>Voidsea Outlook</span><span class="price-tag">Rp100.000</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5" id="paket-rawat">
+    <h2 class="text-center mb-5 fw-bold" data-aos="fade-up">Paket Hemat Rawat Akun + Event</h2>
+    <div class="row g-4">
+        <div class="col-12" data-aos="fade-up">
+            <div class="rawat-card p-4" style="--bg:url('https://upload-os-bbs.hoyolab.com/upload/2025/06/21/17138284/a936b487df9c0f14a36a2370bc956691_3974228888996079047.jpg')">
+                <h5 class="text-info fw-bold">Isi Standar Rawat Akun</h5>
+                <ul class="price-list">
+                    <li><span>Daily & Resin Management</span> <i class="bi bi-check2-all text-info"></i></li>
+                    <li><span>Claim Reward & Expedition</span> <i class="bi bi-check2-all text-info"></i></li>
+                    <li><span>Manual Play (No Cheat)</span> <i class="bi bi-shield-lock-fill text-info"></i></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="col-md-6" data-aos="fade-up">
+            <div class="rawat-card p-4" style="--bg:url('https://upload-os-bbs.hoyolab.com/upload/2024/11/01/17138284/dd8993c3fc7bb5ddafeae471f64ff782_3608980092149050018.png')">
+                <h5 class="text-success fw-bold">Paket Harian</h5>
+                <ul class="price-list">
+                    <li><span>Basic (Daily Only)</span><span class="price">Rp5.000/hari</span></li>
+                    <li><span>Full (Daily + Resin)</span><span class="price">Rp8.000/hari</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6" data-aos="fade-up">
+            <div class="rawat-card p-4" style="--bg:url('https://upload-os-bbs.hoyolab.com/upload/2024/09/10/17138284/9859e0045a4467068ef5178d69288583_2953525766769285402.png')">
+                <h5 class="text-info fw-bold">Paket Mingguan</h5>
+                <ul class="price-list">
+                    <li><span>Hemat (Daily + Weekly Boss 1x)</span><span class="price">Rp45.000/minggu</span></li>
+                    <li><span>Full (Daily + Boss 3x + BP)</span><span class="price">Rp65.000/minggu</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6" data-aos="fade-up">
+            <div class="rawat-card p-4" style="--bg:url('https://upload-os-bbs.hoyolab.com/upload/2024/09/08/17138284/7f79b50c91afb31ebba91adfe55260b8_6971657532865547151.png')">
+                <h5 class="text-warning fw-bold">Paket Bulanan</h5>
+                <ul class="price-list">
+                    <li><span>Hemat (Standard Monthly)</span><span class="price">Rp120.000/bulan</span></li>
+                    <li><span>Full (All-in + BP + Request)</span><span class="price">Rp160.000/bulan</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6" data-aos="fade-up">
+            <div class="rawat-card p-4" style="--bg:url('https://upload-os-bbs.hoyolab.com/upload/2024/09/08/17138284/a8c58b867a57fdad9ac86c9c35957622_8225869466117491146.png')">
+                <h5 class="text-danger fw-bold">Paket Combo (Rawat + Event)</h5>
+                <ul class="price-list">
+                    <li><span>Mingguan Combo</span><span class="price">Rp60.000</span></li>
+                    <li><span>Bulanan Combo</span><span class="price">Rp150.000</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="order" class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card p-4 shadow-lg border-0" data-aos="zoom-in" style="background: rgba(2, 6, 23, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(56,189,248,0.2) !important;">
+                <h2 class="text-center mb-4 fw-bold text-info">Form Pemesanan</h2>
+                <form onsubmit="kirimWA();return false;">
+                    <div class="mb-3">
+                        <label class="small opacity-75 mb-1">Nama Pemesan</label>
+                        <input id="nama" class="form-control" placeholder="Masukkan nama Anda" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="small opacity-75 mb-1">Pilih Layanan</label>
+                        <select id="jenis" class="form-select" onchange="resetForm()" required>
+                            <option value="">🎯 Pilih Layanan</option>
+                            <option value="Explore">🗺️ Explore Map</option>
+                            <option value="Oculus">🧿 Cari Oculus</option>
+                            <option value="Rawat">🛠️ Rawat Akun + Event</option>
+                        </select>
+                    </div>
+
+                    <div id="group-explore" class="d-none">
+                        <div class="mb-3">
+                            <select id="region" class="form-select" onchange="loadSubArea()">
+                                <option value="">🌍 Pilih Region</option>
+                                <option>Mondstadt</option>
+                                <option>Liyue</option>
+                                <option>Inazuma</option>
+                                <option>Sumeru</option>
+                                <option>Fontaine</option>
+                                <option>Natlan</option>
+                                <option>Nod-Krai</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <select id="subarea" class="form-select d-none" onchange="updateHarga()"></select>
+                        </div>
+                        <div class="row g-2 mb-3">
+                            <div class="col-6">
+                                <label class="small opacity-75 mb-1">Progres Sekarang (%)</label>
+                                <input id="persenAwal" type="number" class="form-control" value="0" min="0" max="99" oninput="updateHarga()">
+                            </div>
+                            <div class="col-6">
+                                <label class="small opacity-75 mb-1">Target Akhir (%)</label>
+                                <input id="persenTarget" type="number" class="form-control" value="100" min="1" max="100" oninput="updateHarga()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="group-oculus" class="mb-3 d-none">
+                        <input id="jumlah" type="number" class="form-control" placeholder="Jumlah Oculus" oninput="updateHarga()">
+                    </div>
+
+                    <div id="group-rawat" class="mb-3 d-none">
+                        <select id="durasi" class="form-select" onchange="updateHarga()">
+                            <option value="">🕒 Pilih Paket</option>
+                            <option value="Harian Basic|5000">Harian Basic — Rp5.000</option>
+                            <option value="Harian Full|8000">Harian Full — Rp8.000</option>
+                            <option value="Mingguan Hemat|45000">Mingguan Hemat — Rp45.000</option>
+                            <option value="Mingguan Full|65000">Mingguan Full — Rp65.000</option>
+                            <option value="Bulanan Hemat|120000">Bulanan Hemat — Rp120.000</option>
+                            <option value="Bulanan Full|160000">Bulanan Full — Rp160.000</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3 text-center">
+                        <label class="small opacity-75 mb-1">Total Harga Estimasi</label>
+                        <input id="harga" class="form-control text-center fw-bold text-info fs-5" placeholder="Rp 0" readonly>
+                        <small id="labelPersen" class="text-info d-block mt-1"></small>
+                    </div>
+
+                    <div class="mb-4">
+                        <textarea id="catatan" class="form-control" rows="3" placeholder="Catatan tambahan (misal: jam login, target domain, dll)"></textarea>
+                    </div>
+
+                    <button class="btn btn-wa btn-lg w-100 shadow">
+                        <i class="bi bi-whatsapp me-2"></i>Kirim Pesan ke WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="text-center py-4 border-top border-secondary mt-5">
+    <small class="opacity-50">© 2026 Natsumi Joki Genshin Impact. Seluruh aset milik HoYoverse.</small>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init({ duration: 1000, once: true });
+
+const subAreaData = {
+    "Mondstadt": { "Starfell Valley": 70000, "Galesong Hill": 65000, "Windwail Highland": 65000, "Brightcrown Mountains": 75000, "Dragonspine": 120000 },
+    "Liyue": { "Bishui Plain": 70000, "Qiongji Estuary": 70000, "Sea of Clouds": 75000, "Lisha": 75000, "Minlin": 80000, "Chenyu Vale": 85000, "The Chasm (Upper)": 80000, "The Chasm (Underground)": 110000 },
+    "Inazuma": { "Narukami Island": 80000, "Kannazuka": 75000, "Yashiori Island": 85000, "Watatsumi Island": 80000, "Seirai Island": 95000, "Tsurumi Island": 110000 },
+    "Sumeru": { "Avidya Forest": 75000, "Lokapala Jungle": 80000, "Mawtiyima Forest": 80000, "Gandharva Ville Area": 75000, "Vanarana": 85000, "Hypostyle Desert": 85000, "Land of Upper Setekh": 85000, "Land of Lower Setekh": 90000, "Desert of Hadramaveth": 100000, "Gavireh Lajavard": 90000 },
+    "Fontaine": { "Court of Fontaine Region": 85000, "Belleau Region": 80000, "Beryl Region": 80000, "Underwater Area (Full Zone)": 90000 },
+    "Natlan": { "Easybreeze Holiday Resort": 75000, "Basin of Unnumbered Flames": 90000, "Tequemecan Valley": 85000, "Coatepec Mountain": 90000, "Ochkanatlan": 100000, "Ancient Sacred Mountain": 110000 },
+    "Nod-Krai": { "Wavechaser Plain": 85000, "Hiisi Island": 90000, "Lempo Isle": 85000, "Paha Isle": 85000, "Ashveil Peak": 100000, "Voidsea Outlook": 100000 }
+};
+
+function resetForm() {
+    document.getElementById("group-explore").classList.add("d-none");
+    document.getElementById("group-oculus").classList.add("d-none");
+    document.getElementById("group-rawat").classList.add("d-none");
+    document.getElementById("harga").value = "";
+    document.getElementById("labelPersen").innerText = "";
+
+    const jenis = document.getElementById("jenis").value;
+    if (jenis === "Explore") document.getElementById("group-explore").classList.remove("d-none");
+    if (jenis === "Oculus") document.getElementById("group-oculus").classList.remove("d-none");
+    if (jenis === "Rawat") document.getElementById("group-rawat").classList.remove("d-none");
+}
+
+function loadSubArea() {
+    const region = document.getElementById("region").value;
+    const sub = document.getElementById("subarea");
+    sub.innerHTML = `<option value="">-- Pilih Sub Area --</option>`;
+    if (region && subAreaData[region]) {
+        Object.entries(subAreaData[region]).forEach(([area, harga]) => {
+            sub.innerHTML += `<option value="${area}|${harga}">${area} — Rp${harga.toLocaleString("id-ID")}</option>`;
+        });
+        sub.classList.remove("d-none");
+    } else {
+        sub.classList.add("d-none");
+    }
+}
+
+function updateHarga() {
+    const jenis = document.getElementById("jenis").value;
+    let harga = 0;
+    let label = "";
+
+    if (jenis === "Explore") {
+        const v = document.getElementById("subarea").value;
+        const awal = parseFloat(document.getElementById("persenAwal").value) || 0;
+        const target = parseFloat(document.getElementById("persenTarget").value) || 0;
+        
+        if (v && target > awal) {
+            const hargaFull = Number(v.split("|")[1]);
+            const sisaPersen = target - awal;
+            harga = (hargaFull / 100) * sisaPersen;
+            label = `Mengerjakan ${sisaPersen}% progres`;
+        }
+    } else if (jenis === "Oculus") {
+        const j = document.getElementById("jumlah").value;
+        harga = j ? j * 2000 : 0;
+    } else if (jenis === "Rawat") {
+        const v = document.getElementById("durasi").value;
+        if (v) harga = Number(v.split("|")[1]);
+    }
+    
+    document.getElementById("harga").value = harga ? "Rp " + Math.round(harga).toLocaleString("id-ID") : "";
+    document.getElementById("labelPersen").innerText = label;
+}
+
+function kirimWA() {
+    const getVal = id => document.getElementById(id)?.value || "-";
+    const subAreaText = getVal("subarea") !== "-" ? getVal("subarea").split("|")[0] : "-";
+    const paketText = getVal("durasi") !== "-" ? getVal("durasi").split("|")[0] : "-";
+    const progresText = getVal("jenis") === "Explore" ? `${getVal("persenAwal")}% ke ${getVal("persenTarget")}%` : "-";
+
+    const pesan = `Halo Admin Joki Genshin 👋
+Nama: ${getVal("nama")}
+Layanan: ${getVal("jenis")}
+Region: ${getVal("region")}
+Sub Area: ${subAreaText}
+Progres: ${progresText}
+Jumlah Oculus: ${getVal("jumlah")}
+Paket: ${paketText}
+Harga: ${getVal("harga")}
+Catatan: ${getVal("catatan")}`;
+
+    window.open("https://wa.me/628994090727?text=" + encodeURIComponent(pesan), "_blank");
+}
+</script>
+
+</body>
+</html>
